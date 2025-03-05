@@ -1,5 +1,3 @@
-import { Time } from "./time.js";
-
 export class Colaborador {
     #nome;
     #dataNasc;
@@ -7,7 +5,6 @@ export class Colaborador {
     #salario;
 
     constructor(nome, dataNasc, nacionalidade, salario) {
-        super();
         this.#nome = nome;
         this.#dataNasc = dataNasc;
         this.#nacionalidade = nacionalidade;

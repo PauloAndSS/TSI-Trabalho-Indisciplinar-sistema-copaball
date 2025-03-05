@@ -9,7 +9,6 @@ export class Partida {
     #serie;
 
     constructor(dataPartida, timeA, timeB, golsA, golsB, serie) {
-        super(timeA, timeB, golsA, golsB, serie);
         this.#dataPartida = dataPartida;
         this.#timeA = timeA;
         this.#timeB = timeB;

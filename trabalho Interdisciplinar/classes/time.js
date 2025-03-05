@@ -1,3 +1,5 @@
+import { Colaborador } from "./colaborador";
+
 export class Time {
     #nomeTime;
     #fundacao;
@@ -36,5 +38,47 @@ export class Time {
 
     get colaboradores() {
         return this.#colaboradores;
+    }
+
+    contratar(colaborador){
+        if(colaborador instanceof Colaborador){
+            var index = -1;
+
+            for(i = 0; i < this.#colaboradores.length; i++){
+                if( colaborador == this.#colaboradores[i]){
+                    index = i;
+                }
+            }
+
+            if(index > -1){
+                return false
+            }else{
+                this.#colaboradores.push(colaborador);
+                return true;
+            }
+        }else{
+            return false;
+        }
+    }
+
+    demitir(colaborador){
+        if(colaborador instanceof Colaborador){
+            var index = -1;
+
+            for(i = 0; i < this.#colaboradores.length; i++){
+                if( colaborador == this.#colaboradores[i]){
+                    index = i;
+                }
+            }
+
+            if(index > -1){
+                this.#colaboradores.splice(index);
+                return true;
+            } else {
+                return false;
+            }
+        }else{
+            return false;
+        }
     }
 }
