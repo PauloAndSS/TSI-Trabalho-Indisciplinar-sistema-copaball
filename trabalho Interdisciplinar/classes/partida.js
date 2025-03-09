@@ -14,7 +14,7 @@ export class Partida {
         this.#timeB = timeB;
         this.#golsA = golsA;
         this.#golsB = golsB;
-        this.#serie = serie;
+        this.#serie = serie;//serie A ou B
     }
 
     get dataPartida() {
