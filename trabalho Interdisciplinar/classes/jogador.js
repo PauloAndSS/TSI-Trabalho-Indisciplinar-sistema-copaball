@@ -18,8 +18,21 @@ export class Jogador extends Colaborador {
         return this.#camisa;
     }
 
+    set camisa(numCamisa){
+        if(isNaN(num)){
+            return false;
+        }else{
+            this.#camisa = numCamisa;
+            return true;
+        }
+    }
+
     get posicao() {
         return this.#posicao;
+    }
+
+    set posicao(posiJogo){
+        this.#posicao = posiJogo;
     }
 
     get gols() {
@@ -28,5 +41,23 @@ export class Jogador extends Colaborador {
 
     get assistencias() {
         return this.#assistencias;
+    }
+
+    addGol (gols){
+        if(isNaN(gols)){
+            return false;
+        }else{
+            this.#gols += gols;
+            return true;
+        }
+    }
+
+    addAssistencia(assis){
+        if(isNaN(assis)){
+            return false;
+        }else{
+            this.#assistencias += assis;
+            return true;
+        }
     }
 }

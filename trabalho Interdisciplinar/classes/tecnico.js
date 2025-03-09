@@ -17,4 +17,8 @@ export class Tecnico extends Colaborador {
     get anoExp() {
         return this.#anoExp;
     }
+
+    addAnoExp(){
+        this.#anoExp += 1;
+    }
 }

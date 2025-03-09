@@ -26,4 +26,20 @@ export class Colaborador {
     get salario() {
         return this.#salario;
     }
+
+    set reajustSalario(valor) {
+        if(isNaN(valor)){
+            return false;
+        }else{
+            this.#salario = valor;
+            return true;
+        }
+    }
+
+    bonificacao(){
+        let percent = 5/100;
+        let resultvalor = this.salario + (this.salario * percent);
+
+        return resultvalor;
+    }
 }

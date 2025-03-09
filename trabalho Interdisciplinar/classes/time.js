@@ -40,6 +40,14 @@ export class Time {
         return this.#colaboradores;
     }
 
+    addMundial(){
+        this.#numMundiais += 1;
+    }
+
+    addVitoria(){
+        this.#numVitorias += 1;
+    }
+
     contratar(colaborador){
         if(colaborador instanceof Colaborador){
             var index = -1;

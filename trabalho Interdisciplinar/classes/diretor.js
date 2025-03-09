@@ -12,4 +12,15 @@ export class Diretor extends Colaborador {
     get escola(){
         return this.#escola;
     }
+
+    set escola(escola){
+        this.#escola = escola;
+    }
+
+    bonificacao(){
+        let percent = 15/100;
+        let resultvalor = this.salario + (this.salario * percent);
+
+        return resultvalor;
+    }
 }
