@@ -1,25 +1,21 @@
 import * as Dados from "./copaballDados.js";
 
-//crie aqui o filtro para mostrar todos os colaboradores do time escolhido
-console.log("|| Colabores do Time ||");
-console.log("Função aqui");
+const timeEscolhido = "Flamengo";
 
-//crie aqui o filtrar colaboradores por nome
-console.log("|| Colaboradores que tenha 'silva' no nome ||");
-console.log("Função aqui");
+console.log("|| Colaboradores do Time ||");
+console.log(filtrarColaboradoresPorTime(Dados.colaboradores, timeEscolhido));
 
-//filtre e mostre apenas os jogadores de todos os colaboradores
+console.log("|| Colaboradores que tenham 'silva' no nome ||");
+console.log(filtrarColaboradoresPorNome(Dados.colaboradores, "silva"));
+
 console.log("|| Mostrando os jogadores da temporada ||");
-console.log("Função aqui");
+console.log(filtrarJogadores(Dados.colaboradores));
 
-//faça um filtro para pegar apenas cada técnico de cada time
-console.log("|| Mostrando técnico do times ||");
-console.log("Função aqui");
+console.log("|| Mostrando técnicos dos times ||");
+console.log(filtrarTecnicos(Dados.colaboradores));
 
-//mostre as partidas de um dia
 console.log("|| Mostrando as partidas que aconteceram no dia 10 de abril ||");
-console.log("Função aqui");
+console.log(filtrarPartidasPorData(Dados.partidas, "10 de abril"));
 
-//mostre as partidas de um certo time
 console.log("|| Mostrando as partidas do time ||");
-console.log("Função aqui");
+console.log(filtrarPartidasPorTime(Dados.partidas, timeEscolhido));
