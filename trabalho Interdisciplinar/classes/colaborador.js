@@ -28,18 +28,21 @@ export class Colaborador {
     }
 
     set reajustSalario(valor) {
-        if(isNaN(valor)){
+        if (isNaN(valor)) {
             return false;
-        }else{
+        } else {
             this.#salario = valor;
             return true;
         }
     }
 
-    bonificacao(){
-        let percent = 5/100;
+    bonificacao() {
+        let percent = 5 / 100;
         let resultvalor = this.salario + (this.salario * percent);
-
         return resultvalor;
+    }
+
+    toString() {
+        return `Nome: ${this.#nome}\nData de Nascimento: ${this.#dataNasc}\nNacionalidade: ${this.#nacionalidade}\nSalário: R$ ${this.#salario.toFixed(2)}`;
     }
 }

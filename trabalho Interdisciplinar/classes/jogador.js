@@ -19,7 +19,7 @@ export class Jogador extends Colaborador {
     }
 
     set camisa(numCamisa){
-        if(isNaN(num)){
+        if(isNaN(numCamisa)){
             return false;
         }else{
             this.#camisa = numCamisa;
@@ -59,5 +59,9 @@ export class Jogador extends Colaborador {
             this.#assistencias += assis;
             return true;
         }
+    }
+
+    toString() {
+        return `${super.toString()}\nCamisa: ${this.#camisa}\nPosição: ${this.#posicao}\nGols: ${this.#gols}\nAssistências: ${this.#assistencias}`;
     }
 }

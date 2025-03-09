@@ -52,14 +52,14 @@ export class Time {
         if(colaborador instanceof Colaborador){
             var index = -1;
 
-            for(i = 0; i < this.#colaboradores.length; i++){
+            for(let i = 0; i < this.#colaboradores.length; i++){
                 if( colaborador == this.#colaboradores[i]){
                     index = i;
                 }
             }
 
             if(index > -1){
-                return false
+                return false;
             }else{
                 this.#colaboradores.push(colaborador);
                 return true;
@@ -73,14 +73,14 @@ export class Time {
         if(colaborador instanceof Colaborador){
             var index = -1;
 
-            for(i = 0; i < this.#colaboradores.length; i++){
+            for(let i = 0; i < this.#colaboradores.length; i++){
                 if( colaborador == this.#colaboradores[i]){
                     index = i;
                 }
             }
 
             if(index > -1){
-                this.#colaboradores.splice(index);
+                this.#colaboradores.splice(index, 1);
                 return true;
             } else {
                 return false;
@@ -88,5 +88,9 @@ export class Time {
         }else{
             return false;
         }
+    }
+
+    toString() {
+        return `Time: ${this.#nomeTime}\nFundação: ${this.#fundacao}\nMundiais: ${this.#numMundiais}\nVitórias: ${this.#numVitorias}\nEstádio: ${this.#estadio}\nColaboradores: ${this.#colaboradores.map}`;  /* Fazer o for */
     }
 }

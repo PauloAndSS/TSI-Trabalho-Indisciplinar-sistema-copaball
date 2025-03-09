@@ -18,7 +18,11 @@ export class Tecnico extends Colaborador {
         return this.#anoExp;
     }
 
-    addAnoExp(){
+    addAnoExp() {
         this.#anoExp += 1;
+    }
+
+    toString() {
+        return `${super.toString()}\nFormação: ${this.#formacao}\nAnos de Experiência: ${this.#anoExp}`;
     }
 }

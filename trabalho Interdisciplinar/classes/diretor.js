@@ -20,7 +20,10 @@ export class Diretor extends Colaborador {
     bonificacao(){
         let percent = 15/100;
         let resultvalor = this.salario + (this.salario * percent);
-
         return resultvalor;
+    }
+
+    toString() {
+        return `${super.toString()}\nEscola: ${this.#escola}`;
     }
 }
