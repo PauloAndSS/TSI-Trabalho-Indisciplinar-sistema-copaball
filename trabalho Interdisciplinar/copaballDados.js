@@ -214,3 +214,19 @@ var vetColaboradores = [
 ];
 
 //coloque os colaboradores aqui em baixo:
+
+function autoContratacao(){
+    let contador = 13;
+    let time = 0;
+    for(let i=0; i<vetColaboradores.length; i++){
+        vetTimes[time].contratar(vetColaboradores[i]);
+        if (i + 1 == contador){
+            contador += 13;
+            time += 1;
+        }
+    }
+}
+
+autoContratacao();
+
+export {vetColaboradores, vetPartidas, vetTimes};

@@ -1,4 +1,4 @@
-import { Colaborador } from "./colaborador";
+import { Colaborador } from "./colaborador.js";
 
 export class Diretor extends Colaborador {
 
