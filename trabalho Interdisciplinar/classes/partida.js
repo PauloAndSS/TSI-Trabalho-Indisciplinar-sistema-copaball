@@ -23,6 +23,6 @@ export class Partida extends Jogo {
     }
 
     toString() {
-        return `Data: ${this.dataPartida}\nTime A: ${this.timeA.nomeTime()}\nGols A: ${this.golsA}\nTime B: ${this.timeB.nomeTime()}\nGols B: ${this.golsB}\nSérie: ${this.serie}`;
+        return `Data: ${this.dataPartida}\nTime A: ${this.timeA.nomeTime}\nGols A: ${this.golsA}\nTime B: ${this.timeB.nomeTime}\nGols B: ${this.golsB}\nSérie: ${this.serie}`;
     }
 }

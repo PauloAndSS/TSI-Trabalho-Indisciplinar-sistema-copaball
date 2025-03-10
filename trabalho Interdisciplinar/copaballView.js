@@ -1,21 +1,27 @@
-import * as Dados from "./copaballDados.js";
+import * as Model from "./copaballModel.js";
+
 
 const timeEscolhido = "Flamengo";
 
-console.log("|| Colaboradores do Time ||");
-console.log(filtrarColaboradoresPorTime(Dados.colaboradores, timeEscolhido));
+console.log("|| Colaboradores do Time Flamengo ||");
+console.log(Model.mostrarColabTimes(timeEscolhido));
 
-console.log("|| Colaboradores que tenham 'silva' no nome ||");
-console.log(filtrarColaboradoresPorNome(Dados.colaboradores, "silva"));
+const nome = "Santos";
+console.log("|| Colaboradores que tenham 'Santos' no nome ||");
+console.log(Model.nomeColab(nome));
 
+const cargo = "Jogador";
 console.log("|| Mostrando os jogadores da temporada ||");
-console.log(filtrarJogadores(Dados.colaboradores));
+console.log(Model.filtrarCargos(cargo));
 
-console.log("|| Mostrando técnicos dos times ||");
-console.log(filtrarTecnicos(Dados.colaboradores));
+const time = "Palmeiras";
+console.log("|| Mostrando técnicos do time Palmeiras ||");
+console.log(Model.filtrarTecnicosTime (time));
 
-console.log("|| Mostrando as partidas que aconteceram no dia 10 de abril ||");
-console.log(filtrarPartidasPorData(Dados.partidas, "10 de abril"));
+const data = "10/02";
+console.log("|| Mostrando as partidas que aconteceram no dia 10 de fevereiro ||");
+console.log(Model.filtrarPartidasData(data));
 
-console.log("|| Mostrando as partidas do time ||");
-console.log(filtrarPartidasPorTime(Dados.partidas, timeEscolhido));
+const timePart = "Flamengo";
+console.log("|| Mostrando as partidas do Flamengo ||");
+console.log(Model.filtrarPartidasTime(timePart));
