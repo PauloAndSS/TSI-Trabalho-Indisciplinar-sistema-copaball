@@ -1,21 +1,40 @@
 import { Time } from "./time.js";
 
-class Jogo {
-    constructor(dataPartida, timeA, timeB, golsA, golsB) {
-        this.dataPartida = dataPartida;
-        this.timeA = timeA;
-        this.timeB = timeB;
-        this.golsA = golsA;
-        this.golsB = golsB;
-    }
-}
-
-export class Partida extends Jogo {
+export class Partida {
+    #dataPartida;
+    #timeA;
+    #timeB;
+    #golsA;
+    #golsB;
     #serie;
 
     constructor(dataPartida, timeA, timeB, golsA, golsB, serie) {
-        super(dataPartida, timeA, timeB, golsA, golsB);
-        this.#serie = serie; // Serie A ou B
+        this.#dataPartida = dataPartida;
+        this.#timeA = timeA;
+        this.#timeB = timeB;
+        this.#golsA = golsA;
+        this.#golsB = golsB;
+        this.#serie = serie;
+    }
+
+    get dataPartida() {
+        return this.#dataPartida;
+    }
+
+    get timeA() {
+        return this.#timeA;
+    }
+
+    get timeB() {
+        return this.#timeB;
+    }
+
+    get golsA() {
+        return this.#golsA;
+    }
+
+    get golsB() {
+        return this.#golsB;
     }
 
     get serie() {

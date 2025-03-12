@@ -213,14 +213,12 @@ var vetColaboradores = [
     new Jogador("Pedro Raul", "01/01/1999", "Brasileiro", 38000, 11, "Ponta-esquerda", 18, 12)
 ];
 
-//coloque os colaboradores aqui em baixo:
-
-function autoContratacao(){
+function autoContratacao() {
     let contador = 13;
     let time = 0;
-    for(let i=0; i<vetColaboradores.length; i++){
+    for (let i = 0; i < vetColaboradores.length; i++) {
         vetTimes[time].contratar(vetColaboradores[i]);
-        if (i + 1 == contador){
+        if (i + 1 == contador) {
             contador += 13;
             time += 1;
         }
@@ -229,4 +227,4 @@ function autoContratacao(){
 
 autoContratacao();
 
-export {vetColaboradores, vetPartidas, vetTimes};
+export { vetColaboradores, vetPartidas, vetTimes };

@@ -91,6 +91,6 @@ export class Time {
     }
 
     toString() {
-        return `Time: ${this.#nomeTime}\nFundação: ${this.#fundacao}\nMundiais: ${this.#numMundiais}\nVitórias: ${this.#numVitorias}\nEstádio: ${this.#estadio}\nColaboradores: ${this.#colaboradores.map}`;  /* Fazer o for */
+        return `Time: ${this.#nomeTime}\nFundação: ${this.#fundacao}\nMundiais: ${this.#numMundiais}\nVitórias: ${this.#numVitorias}\nEstádio: ${this.#estadio}\nColaboradores: ${this.#colaboradores.map}`;
     }
 }
