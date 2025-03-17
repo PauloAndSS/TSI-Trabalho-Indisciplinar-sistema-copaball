@@ -1,4 +1,5 @@
 export class Colaborador {
+    //Atributos Privados
     #nome;
     #dataNasc;
     #nacionalidade;

@@ -1,5 +1,3 @@
-import { Time } from "./time.js";
-
 export class Partida {
     #dataPartida;
     #timeA;

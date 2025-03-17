@@ -1,10 +1,10 @@
 import * as Dados from "./copaballDados.js";
-import { Jogador } from "./classes/jogador.js";
-import { Tecnico } from "./classes/tecnico.js";
-import { Diretor } from "./classes/diretor.js";
+import { Jogador } from "./classes/Jogador.js";
+import { Tecnico } from "./classes/Tecnico.js";
+import { Diretor } from "./classes/Diretor.js";
 
 function filtrarTimesNome(nome) {
-    var result = null
+    var result = null;
     for (let i = 0; i < Dados.vetTimes.length; i++) {
         if (Dados.vetTimes[i].nomeTime == nome) {
             result = Dados.vetTimes[i].toString();
@@ -44,7 +44,7 @@ function nomeColab(nome) {
 
     var stringResult = "";
     for(let i = 0; i < vetFiltrado.length; i++){
-        stringResult += "Colaborador " + (i+1) + "\n"+vetFiltrado[i] + "\n\n";
+        stringResult += "Colaborador " + (i+1) + "\n"+ vetFiltrado[i] + "\n\n";
     }
 
     return stringResult;

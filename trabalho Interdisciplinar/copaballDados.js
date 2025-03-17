@@ -1,8 +1,8 @@
-import { Partida } from "./classes/partida.js";
-import { Time } from "./classes/time.js";
-import { Diretor } from "./classes/diretor.js";
-import { Tecnico } from "./classes/tecnico.js";
-import { Jogador } from "./classes/jogador.js";
+import { Partida } from "./classes/Partida.js";
+import { Time } from "./classes/Time.js";
+import { Diretor } from "./classes/Diretor.js";
+import { Tecnico } from "./classes/Tecnico.js";
+import { Jogador } from "./classes/Jogador.js";
 
 //Vetor de Times
 var vetTimes = [
